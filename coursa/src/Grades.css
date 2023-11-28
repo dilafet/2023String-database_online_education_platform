@@ -1,0 +1,87 @@
+:root {
+
+    --GradesTextColor:  #64505a;
+
+    --grades--background: #afd6a4;
+    --grades--title--background:  #5b6f54;
+    --grades--item:#e1ddbb;
+    --backgroud: #FEFAD4;
+    
+}
+
+.grades-container {
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-grade-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--grades--item);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.course-grade-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--grades--background);
+    font-size: 1.5em;
+    color: var(--grades--title--background);
+    border-radius: 10px 10px 0px 0px;
+    height: 40px;
+}
+
+.course-grade-title {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    bottom: 5px;
+    right: 60px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.course-grade-grade {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    bottom: 5px;
+}
+
+.course-grade-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--GradesTextColor);
+    margin: 5px 10px;
+}
+
+.my-grades-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--grades--item);
+    color: var(--GradesTextColor);
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+.my-grades-container > div{
+    margin: 10px;
+}

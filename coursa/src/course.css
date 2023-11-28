@@ -1,0 +1,915 @@
+:root {
+    --textColor: #64505a;
+    --backgroundColor: #fefad4;
+    --menuItemHover: #f7f2c5;
+    --courseBackgroundColor: #afd6a4;
+    --courseCategoryTegColor: #64505a;
+    --courseCategoryTegTextColor: #fefad4;
+    --courseRegisterButton: #8fb9a8;
+    --courseRegisteredButton: #64505a;
+    --courseCancelButton: #f1828d;
+    --homeworkBackgroundColor: #fcd0ba;
+    --downloadableColor: #8fb9a8;
+
+    --submitBackgroundColor: #8fb9a8;
+    --submitTextColor: #425950;
+    --submitHoverBackgroundColor: #a2cdbb;
+    --submitTextHoverColor: #5d7e71;
+
+    --dividerColor: #d8d5b4;
+
+    --optionTextColor: #4a5945;
+    --optionBackgroundColor: #afd6a4;
+
+    --optionTextTeacherColor: #be656b;
+    --optionBackgroundTeacherColor: #fda5ae;
+
+    --optionSelectedTextColor: #afd6a4;
+    --optionSelectedBackgroundColor: #5b6f54;
+
+    --optionSelectedTextTeacherColor: #fda5ae;
+    --optionSelectedBackgroundTeacherColor: #be656b;
+
+    --uploadedBackgroundColor: #ffaaa7;
+    --uploadedTextColor: rgb(142, 113, 127);
+
+    --uploadedHoverBackgroundColor: #8fb9a8;
+    --uploadedHoverTextColor: #425950;
+
+    --course-inputBox-height: 40px;
+    --course-inputBox-padding: 10px;
+
+    --course-inputbox-color: #64505a;
+    --course-inputbox-textColor: #64505a;
+
+    --course-edit-button: #afd6a4;
+    --course-edit-button-text: #4f614a;
+    --course-edit-button-hover: #8fb9a8;
+    --course-edit-button-text-hover: #455850;
+
+    --course-delete: #f1828d;
+    --course-delete-text: #84444b;
+    --course-delete-hover: #ee6775;
+    --course-delete-hover-text: #84444b;
+}
+
+.course-video-player {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.course-video-player-video-container {
+    height: 75vh;
+    width: 100%;
+    background-color: black;
+}
+.course-video-player-title {
+    font-size: 2em;
+    color: var(--textColor);
+    margin: 10px;
+}
+
+.course-video-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 101px;
+    margin: 10px 10px 0px 10px;
+    background-color: transparent;
+}
+
+.course-video-thumbnail {
+    display: flex;
+    justify-content: center;
+    min-width: 160px;
+    max-width: 160px;
+    min-height: 90px;
+    max-height: 90px;
+    height: 90px;
+    width: 160px;
+    border-radius: 10px;
+}
+
+.course-video-title {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 160px;
+    bottom: 10px;
+    margin: 10px;
+}
+
+.course-video-title-teacher {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 180px;
+    left: 160px;
+    bottom: 10px;
+    margin: 10px;
+}
+
+.course-video-title-teacher > span {
+    display: block;
+    margin: auto auto auto 10px;
+    font-size: 1.2em;
+    color: var(--textColor);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.course-video-title > span {
+    display: block;
+    margin: auto;
+    font-size: 1.2em;
+    color: var(--textColor);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.divider {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--dividerColor);
+    height: 1px;
+    width: 100%;
+    border-radius: 1px;
+}
+
+.course-info-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px 20px 20px;
+}
+.course-info-edit-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 20px;
+}
+.course-info-edit-date-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.course-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: var(--textColor);
+}
+
+.course-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    height: 200px;
+    padding-bottom: 3px;
+    color: var(--textColor);
+}
+
+.course-text > .course-title {
+    font-size: 2em;
+}
+
+.course-text > .course-teacher {
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.course-text > .course-description {
+    height: 40px;
+    margin: auto auto 5px 0px;
+    overflow: hidden;
+}
+
+.course-text > .course-category {
+    background-color: var(--courseCategoryTegColor);
+    color: var(--courseCategoryTegTextColor);
+    margin: 0px auto 0px 0px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    padding: 2px 3px;
+}
+
+.course-option-buttons-container {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    background-color: var(--optionBackgroundColor);
+}
+
+.course-option-buttons-container-teacher {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    background-color: var(--optionBackgroundTeacherColor);
+}
+
+.course-option-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 1.25em;
+    color: var(--optionTextColor);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.course-option-button-teacher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 1.25em;
+    color: var(--optionTextTeacherColor);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.course-option-button.selected {
+    background-color: var(--optionSelectedBackgroundColor);
+    color: var(--optionSelectedTextColor);
+}
+
+.course-option-button-teacher.selected-teacher {
+    background-color: var(--optionSelectedBackgroundTeacherColor);
+    color: var(--optionSelectedTextTeacherColor);
+}
+
+.course-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-attribute-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.course-attribute-chooser {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+.course-couresware-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    background-color: var(--course-edit-button);
+    color: var(--course-edit-button-text);
+    border-radius: 15px;
+    padding: 2px 5px;
+    margin: auto 3px;
+}
+
+#course-courseware-chosen {
+    color: var(--course-edit-button-text);
+
+    padding: 3px 5px;
+}
+
+.course-attribute-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.course-attribute-button {
+    display: flex;
+    justify-content: center;
+    background-color: var(--course-edit-button);
+    color: var(--course-edit-button-text);
+    border-radius: 15px;
+    padding: 2px 8px;
+    font-size: 1em;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.course-attribute-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    margin: 10px 10px 0px 10px;
+    background-color: transparent;
+    font-size: 1em;
+}
+
+.course-attribute-item-title {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.course-attribute-item-title > span {
+    display: block;
+    font-size: 1em;
+    color: var(--textColor);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.course-attribute-item-button-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.course-attribute-item-button {
+    display: flex;
+    justify-content: center;
+    background-color: var(--course-edit-button);
+    color: var(--course-edit-button-text);
+    border-radius: 15px;
+    padding: 2px 8px;
+    font-size: 1em;
+    width: 70px;
+    margin: auto 10px auto auto;
+    cursor: pointer;
+}
+
+.course-attribute-item-button:hover {
+    background-color: var(--course-edit-button-hover);
+    color: var(--course-edit-button-text-hover);
+}
+
+.course-attribute-item-button.course-attribute-item-delete {
+    background-color: var(--course-delete);
+    color: var(--course-delete-text);
+}
+
+.course-attribute-item-button.course-attribute-item-delete:hover {
+    background-color: var(--course-delete-hover);
+    color: var(--course-delete-hover-text);
+}
+
+.homework {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--homeworkBackgroundColor);
+}
+
+.homework.course-homework-edit {
+    border: 2px solid var(--optionSelectedBackgroundTeacherColor);
+    background-color: var(--backgroud);
+}
+
+.homework-title-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: var(--textColor);
+    height: 60px;
+}
+
+.homework-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--textColor);
+}
+
+.homework-title > span {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.homework-description {
+    margin: 20px;
+    color: var(--textColor);
+}
+
+.homework-downloadable {
+    margin: 5px 20px 5px 20px;
+    color: var(--textColor);
+    transition: 0.25s;
+    text-decoration: underline;
+}
+
+.homework-due-date {
+    margin: 20px;
+    color: var(--textColor);
+}
+
+.homework-uploader{
+    margin: 10px 0px;
+}
+
+.homework-downloadable:hover {
+    color: var(--downloadableColor);
+    cursor: pointer;
+}
+
+.homework-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.homework-submit {
+    border: none;
+    background-color: var(--submitBackgroundColor);
+    color: var(--submitTextColor);
+    margin: auto;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 1.5em;
+    transition: 0.25s;
+}
+.homework-submit.homework-button {
+    margin: auto auto auto auto;
+}
+
+.homework-delete {
+    border: none;
+    background-color: var(--course-delete);
+    color: var(--course-delete-text);
+    margin: auto auto auto 10px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 1.5em;
+    transition: 0.25s;
+}
+
+.homework-submit:hover {
+    background-color: var(--submitHoverBackgroundColor);
+    color: var(--submitTextHoverColor);
+}
+
+.homework-delete:hover {
+    background-color: var(--course-delete-hover);
+    color: var(--course-delete-hover-text);
+}
+
+.homework-uploaded {
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 5px;
+    transition: 0.25s;
+    background-color: var(--uploadedBackgroundColor);
+    color: var(--uploadedTextColor);
+    margin: 5px auto 5px 20px;
+    font-size: 1em;
+}
+
+.course-thumbnail-label {
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 5px;
+    transition: 0.25s;
+    background-color: var(--course-edit-button);
+    color: var(--course-edit-button-text);
+    margin: 5px auto 5px 20px;
+    font-size: 1em;
+}
+
+#course-thumbnail-chosen {
+    margin-left: 5px;
+    color: var(--course-edit-button-text);
+    font-size: 0.9em;
+}
+
+#file-chosen {
+    margin-left: 5px;
+    color: var(--uploadedTextColor);
+    font-size: 0.9em;
+}
+
+.homework-uploaded:hover {
+    background-color: var(--uploadedHoverBackgroundColor);
+    color: var(--uploadedHoverTextColor);
+}
+
+.homework-grade {
+    color: var(--textColor);
+    margin: 5px 20px;
+    font-size: 2em;
+}
+
+.course-input-box-container {
+    position: relative;
+    width: 100%;
+    height: calc(var(--course-inputBox-height) + 10px);
+}
+
+.course-input-box {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    height: var(--course-inputBox-height);
+}
+
+.course-input-box input {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--course-inputbox-color);
+    color: var(--course-inputbox-textColor);
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+.course-input-box input::-webkit-datetime-edit-month-field:focus,
+.course-input-box input::-webkit-datetime-edit-day-field:focus,
+.course-input-box input::-webkit-datetime-edit-year-field:focus,
+.course-input-box input::-webkit-datetime-edit-hour-field:focus,
+.course-input-box input::-webkit-datetime-edit-minute-field:focus,
+.course-input-box input::-webkit-datetime-edit-meridiem-field:focus {
+    background-color: var(--dividerColor);
+    border-radius: 5px;
+}
+.course-input-box-span {
+    pointer-events: none;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    padding-left: 5px;
+    color: var(--course-inputbox-textColor);
+    transition: 0.25s;
+}
+
+.course-input-box-active {
+    transform-origin: left;
+    transform: translateY(-50%) translateX(5px) scale(0.8);
+}
+
+.course-input-box-span p {
+    background-color: var(--backgroud);
+    padding: 0px 5px;
+}
+
+.course-info-button {
+    display: flex;
+    justify-content: center;
+    background-color: var(--course-edit-button);
+    color: var(--course-edit-button-text);
+    border-radius: 15px;
+    padding: 2px 8px;
+    font-size: 1em;
+    width: 70px;
+    margin: -10px 5px 10px 5px;
+    cursor: pointer;
+}
+
+.course-info-button.course-delete {
+    background-color: var(--course-delete);
+    color: var(--course-delete-text);
+}
+
+.course-info-button.course-delete:hover {
+    background-color: var(--course-delete-hover);
+    color: var(--course-delete-hover-text);
+}
+
+.course-info-button:hover {
+    background-color: var(--course-edit-button-hover);
+    color: var(--course-edit-button-text-hover);
+}
+
+.course-info-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.course-info-thumbnail-chooser {
+    height: 30px;
+}
+
+.teacher-homework-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+.students-homework {
+    background-color: var(--homeworkBackgroundColor);
+    height: 40px;
+    color: var(--textColor);
+    font-size: 1.25em;
+}
+
+.students-homework td {
+    text-align: center;
+    padding: 5px;
+}
+
+.students-homework td:not(:first-child) {
+    border-left: 2px solid #f1c7b1;
+}
+
+.student-homework-row {
+    color: var(--textColor);
+}
+
+.student-homework-row td {
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--dividerColor);
+}
+
+.student-homework-row td:last-child {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+.student-homework-gradingBox {
+    display: flex;
+    flex-direction: row;
+    background-color: #fad1bb;
+    border-radius: 15px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.student-homework-gradingBox:hover {
+    background-color: #fad6c3;
+    color: #816975;
+}
+
+.student-homework-gradingBox > input {
+    font-size: 1em;
+    color: var(--textColor);
+    padding: 10px;
+    margin: 2px;
+    border-radius: 15px;
+    background-color: #fbe5d9;
+    outline: none;
+    border: none;
+    width: 70px;
+}
+
+.student-homework-gradingBox > div {
+    font-size: 1em;
+    color: var(--textColor);
+    margin: auto 8px auto 2px;
+}
+
+.course-students-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.course-student-search-logo {
+    fill: var(--textColor);
+    margin: auto;
+    height: 20px;
+    width: 20px;
+}
+
+.course-students-search {
+    position: relative;
+    border: 2px solid var(--textColor);
+    border-radius: 20px;
+    width: 350px;
+    height: 35px;
+    margin: 30px auto;
+}
+
+.course-students-search > div {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 9px;
+    bottom: 0;
+}
+
+.course-students-search > input {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    right: 35px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1em;
+    color: var(--textColor);
+}
+
+.course-students-search > input::placeholder {
+    font-size: 1em;
+    color: var(--textColor);
+}
+
+.course-students-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-students-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    height: 40px;
+    background-color: var(--homeworkBackgroundColor);
+}
+
+.course-students-header > div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    color: var(--textColor);
+}
+
+.course-students-header > div:nth-child(1),
+.course-students-header > div:nth-child(2),
+.course-students-header > div:nth-child(3) {
+    width: 60%;
+}
+
+.course-students-header > div:nth-child(4),
+.course-students-header > div:nth-child(5),
+.course-students-header > div:nth-child(6) {
+    width: 20%;
+}
+
+.course-students-header > div:nth-child(7) {
+    width: 15%;
+}
+
+.course-students-header > div > span {
+    margin: auto;
+}
+
+.course-students-header > div:hover:not(:last-child) {
+    background-color: #ffc8ad;
+}
+
+.course-student-header {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    background-color: #ffe0d1;
+    padding: 5px 0;
+}
+
+.course-student-header > div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    color: var(--textColor);
+    margin: auto;
+}
+
+.course-student-header > div:nth-child(1),
+.course-student-header > div:nth-child(2),
+.course-student-header > div:nth-child(3) {
+    width: 60%;
+}
+
+.course-student-header > div:nth-child(4),
+.course-student-header > div:nth-child(5),
+.course-student-header > div:nth-child(6) {
+    width: 20%;
+}
+
+.course-student-header > div:nth-child(7) {
+    width: 15%;
+}
+
+.course-student-row {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    color: var(--textColor);
+    background-color: #fbece4;
+    padding: 5px 0;
+}
+
+.course-student-row > div:first-child {
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+    width: 60%;
+    padding-left: 20%;
+    font-size: 0.9em;
+}
+
+.course-student-row > div:last-child {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    font-size: 0.9em;
+}
+
+.course-student-button {
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: var(--course-edit-button);
+    color: var(--course-edit-button-text);
+    width: 90%;
+    font-size: 0.95em;
+    margin-right: 10px;
+}
+
+.course-student-button:hover {
+    background-color: var(--course-edit-button-hover);
+    color: var(--course-edit-button-text-hover);
+}
+
+.course-student-grade-input {
+    outline: none;
+    border: none;
+    background-color: #fdeee6;
+    height: 20px;
+    width: 50px;
+    color: var(--textColor);
+    padding: 0px 5px;
+    font-size: 0.9em;
+    border-radius: 15px;
+}
+
+.course-student-row-header {
+    display: flex;
+    color: var(--textColor);
+    background-color: #fae5da;
+    height: 25px;
+}
+
+.course-student-row-header > div:first-child {
+    flex-grow: 1;
+    display: flex;
+    margin: auto 0px;
+    justify-content: left;
+    padding-left: 20%;
+    width: 60%;
+}
+
+.course-student-row-header > div:last-child {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: auto 0px;
+    width: 20%;
+}
+
+.student-homework-row-downloadables {
+    cursor: pointer;
+}

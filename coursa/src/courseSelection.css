@@ -1,0 +1,361 @@
+:root {
+    --textColor: #64505a;
+    --backgroundColor: #fefad4;
+    --menuItemHover: #f7f2c5;
+    --studentColor: #8fb9a8;
+    --teacherColor: #f1828d;
+    --courseBackgroundColor: #d8d3ab;
+    --courseCategoryTegColor: #64505a;
+    --courseCategoryTegTextColor: #fefad4;
+    --courseRegisterButton: #8fb9a8;
+    --courseRegisteredButton: #64505a;
+    --courseCancelButton: #f1828d;
+    --courseSelectiondividerColor: #d8d5b4;
+    --courseSelectionFilterColor: #e7e2bc;
+}
+
+.course-selection-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.course-selection-filter {
+    margin: 50px auto 5px auto;
+}
+
+.course-selection-filter-container {
+    display: flex;
+    position: relative;
+}
+
+.course-selection-filter-label-container {
+    height: 100%;
+}
+
+.course-selection-filter-label {
+    display: inline-flex;
+    align-items: center;
+    height: 35px;
+    width: 120px;
+    margin: 10px;
+    font-size: 1.2em;
+    color: var(--textColor);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.course-selection-search-container {
+    border: none;
+    position: relative;
+    display: flex;
+    width: 350px;
+    height: 40px;
+    margin: 50px auto auto auto;
+}
+
+.course-selection-search-option {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100px;
+    border-radius: 40px 0px 0px 40px;
+    font-size: 1.1em;
+    color: var(--backgroundColor);
+    background-color: var(--textColor);
+}
+
+.course-selection-search-option label {
+    margin: auto;
+    padding: 3px 10px 0px 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.course-selection-search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+    border-top: 2px solid var(--textColor);
+    border-right: 2px solid var(--textColor);
+    border-bottom: 2px solid var(--textColor);
+    border-radius: 0px 40px 40px 0px;
+    font-size: 1.1em;
+}
+
+.course-selection-search-logo {
+    fill: var(--textColor);
+    margin: auto;
+    height: 20px;
+    width: 20px;
+}
+
+.course-selection-search-bar {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 1em;
+    color: var(--textColor);
+    margin: 0px 12px;
+    width: 80%;
+    height: 100%;
+}
+
+.course-selection-search-button {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    height: 100%;
+}
+
+.course-selection-radio-container {
+    display: inline-flex;
+    align-items: center;
+    height: 35px;
+    margin: 10px;
+}
+
+.course-selection-radio-container input {
+    display: none;
+}
+
+.course-selection-radio-labal-container {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0px 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    transition: 0.25s;
+}
+
+.course-selection-left-radio {
+    border-top: 2px solid var(--textColor);
+    border-bottom: 2px solid var(--textColor);
+    border-left: 2px solid var(--textColor);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.course-selection-right-radio {
+    border-top: 2px solid var(--textColor);
+    border-bottom: 2px solid var(--textColor);
+    border-right: 2px solid var(--textColor);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.course-selection-radio-container input:checked + .course-selection-radio-labal-container {
+    background-color: var(--textColor);
+    color: var(--backgroundColor);
+}
+
+.course-selection-categories-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.course-selection-category {
+    display: inline-flex;
+    align-items: center;
+    height: 35px;
+    margin: 10px;
+    border: 2px solid var(--textColor);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    transition: 0.25s;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.course-selection-category-checkbox {
+    display: none;
+}
+
+.course-selection-category-checkbox:checked + .course-selection-category {
+    background-color: var(--textColor);
+    color: var(--backgroundColor);
+}
+
+::placeholder {
+    color: var(--textColor);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.course-selection-course-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 200px;
+    padding: 10px;
+    max-width: 800px;
+    width: 100%;
+    min-width: 650px;
+}
+
+.course-selection-item-divider {
+    position: absolute;
+    top: 200px;
+    background-color: var(--courseSelectiondividerColor);
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+
+.course-selection-course-image {
+    border-radius: 10px;
+    height: 180px;
+    width: 320px;
+}
+
+.course-selection-course-info {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    left: 330px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    color: var(--textColor);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.course-selection-course-title {
+    font-size: 1.5em;
+    max-height: 2.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.course-selection-course-teacher {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.course-selection-course-description {
+    display: block;
+    margin: auto 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.course-selection-course-category {
+    background-color: var(--courseCategoryTegColor);
+    color: var(--courseCategoryTegTextColor);
+    margin: 0px auto 0px 0px;
+    font-size: 0.8em;
+    padding: 2px 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.course-selection-course-bottom {
+    display: inline-flex;
+    margin: 10px 0px 0px 0px;
+}
+
+.course-selection-course-date {
+    margin: auto auto auto 0px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 0.8em;
+    color: var(--courseDateColor);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.course-selection-course-register-button {
+    display: flex;
+    margin: auto 0px auto auto;
+    border-radius: 30px;
+    padding: 3px;
+    width: 110px;
+    font-size: 1.2em;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    color: var(--backgroundColor);
+    transition: 0.25s;
+}
+
+.course-selection-registered {
+    background-color: var(--courseRegisteredButton);
+}
+
+.course-selection-register {
+    background-color: var(--courseRegisterButton);
+}
+
+.course-selection-cancel {
+    background-color: var(--courseCancelButton);
+}
+
+.course-selection-course-register-button span {
+    margin: auto;
+}
+
+.course-selection-filter-divider {
+    margin-top: 10px;
+    background-color: var(--courseSelectionFilterColor);
+    height: 2px;
+    width: 100vw;
+    border-radius: 2px;
+}
+
+.course-selection-add-course-button{
+    background-color: #8fb9a8;
+    color: #4f685e;
+    border-radius: 30px;
+    padding: 3px 15px;
+    font-size: 1.2em;
+    margin: 5px 0px;
+}
+
+.course-selection-add-course-button:hover{
+    background-color: #a8cdbe;
+    color: #647c72;
+    border-radius: 30px;
+    padding: 3px 15px;
+    font-size: 1.2em;
+    margin: 5px 0px;
+}

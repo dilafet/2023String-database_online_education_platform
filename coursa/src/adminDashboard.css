@@ -1,0 +1,317 @@
+:root {
+    --inputBox-height: 45px;
+    --inputBox-padding: 10px;
+
+    --inputBoxColor: #64505a;
+    --inputBoxColorHover: #bd9d8d;
+    --inputBoxColorDisabled: #ced8b8;
+    --inputBoxTextColor: #64505a;
+
+    --logoTeacherColor:  #F1828D;
+    --logoTeacherColorHover:  #f1b482;
+    --logoStudentColor: #8FB9A8;
+    --logoStudentColorHover: #f1b482;
+
+    --logoTextTeacherColor: #F1828D;
+    --logoTextTeacherColorHover: #f1b482;
+    --logoTextStudentColor: #8FB9A8;
+    --logoTextStudentColorHover: #f1b482;
+
+    --ButtonColor:  #64505a;
+    --ButtonColorHover:   #bd9d8d;
+    --ButtonActiveColor:   #847770;
+    --ButtonDisabledColor:  #ced8b8;
+
+    --SwitchColor:   #64505a;
+    --SwitchColorHover:   #bd9d8d;
+    --TextColor:  #64505a;
+    
+    --description:  #7c6370;
+    
+    --backgroud: #FEFAD4;
+    
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    height: calc(var(--inputBox-height) + var(--inputBox-padding) * 2);
+    padding: var(--inputBox-padding);
+    transition: 0.25s;
+}
+
+.inputBox input {
+    height: 100%;
+    min-width: 100%;
+    border: 2px solid var(--inputBoxColor);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    padding: 10px;
+    color: var(--inputBoxTextColor);
+    background-color: var(--backgroud);
+}
+
+.inputBox input:hover {
+    border-color: var(--inputBoxColorHover);
+    color: var(--inputBoxTextColor);
+}
+
+.inputBox input:hover ~ span {
+    color: var(--inputBoxColorHover);
+}
+
+.inputBox input:disabled {
+    border-color: var(--inputBoxColorDisabled);
+    color: transparent;
+}
+
+.inputBox input:disabled ~ span {
+    color: var(--inputBoxColorDisabled);
+}
+
+.inputBox span {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1em;
+    transition: 0.25s;
+    color: var(--inputBoxColor);
+    background: transparent;
+}
+
+.inputBox p {
+    padding: 0 5px;
+    background: var(--backgroud);
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    transform-origin: top left;
+    padding: 0 5px;
+    transform: translateY(-50%) translateX(5px) scale(0.95);
+}
+
+#name-inputBox {
+    height: calc(var(--inputBox-height) + var(--inputBox-padding) * 2);
+    transition: 0.25s;
+}
+
+#name-inputBox.on-sign-in {
+    height: 0px;
+}
+
+#name-inputBox.on-sign-in > .inputBox {
+    opacity: 0;
+}
+
+#confirm-password-inputBox {
+    height: calc(var(--inputBox-height) + var(--inputBox-padding) * 2);
+    transition: 0.25s;
+}
+
+#confirm-password-inputBox.on-sign-in {
+    height: 0px;
+}
+
+#confirm-password-inputBox.on-sign-in > .inputBox {
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.description-container {
+    position: relative;
+    margin: 0px;
+    z-index: -1;
+    padding: 0px var(--inputBox-padding);
+    overflow: hidden;
+    height: 0px;
+    transition: 0.25s;
+}
+
+.description {
+    display: block;
+    margin: auto;
+    border-inline: 2px solid var(--description);
+    width: 96%;
+    padding: 0px 15px 10px 15px;
+    color: var(--description);
+}
+
+.logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transition: 0.25s;
+}
+
+.logo-on {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.logo-off {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.logo-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.logo-text {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 100px;
+    transition: 0.35s;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.logo-text-on {
+    transform: rotateX(0deg) scale(1);
+    opacity: 1;
+}
+
+.logo-text-off {
+    transform: rotateX(90deg) scale(0.75);
+    opacity: 0;
+}
+
+.logo-text-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 70px;
+}
+
+.logo-and-text-container {
+    position: relative;
+    width: 500px;
+    height: 100px;
+}
+
+.logo-text-container:hover .student-text{
+    color: var(--logoTextStudentColorHover);
+}
+
+.logo-container:hover{
+    fill: var(--logoStudentColorHover)
+}
+
+.student-logo {
+    fill: var(--logoStudentColor);
+}
+
+.student-text {
+    color: var(--logoTextStudentColor);
+}
+
+.teacher-logo {
+    fill: var(--logoTeacherColor);
+}
+
+.teacher-text {
+    color: var(--logoTextTeacherColor);
+}
+
+.logo-text-container:hover .teacher-text {
+    color: var(--logoTextTeacherColorHover);
+}
+
+.logo-container:hover.teacher-logo{
+    fill: var(--logoTeacherColorHover)
+}
+
+.signIn {
+    display: flow-root;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signInAndUpSwitch {
+    padding: 30px 10px 10px 10px;
+    font-size: 1em;
+    color: var(--SwitchColor);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.signInAndUpSwitch:hover {
+    color: var(--SwitchColorHover);
+}
+
+.SignInAndUpButton {
+    display: block;
+    margin: auto;
+    width: 150px;
+    border: 2px solid var(--ButtonColor);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    padding: 10px;
+    color: var(--ButtonColor);
+    background: transparent;
+    transition: 0.25s;
+}
+
+.SignInAndUpButton:disabled{    
+    border-color: var(--ButtonDisabledColor);
+    color: var(--ButtonDisabledColor);
+}
+
+.SignInAndUpButton:active:hover{    
+    border-color: var(--ButtonActiveColor);
+    color: var(--ButtonActiveColor);
+}
+
+.SignInAndUpButton:hover{    
+    border-color: var(--ButtonColorHover);
+    color: var(--ButtonColorHover);
+}
+
+.SignInAndUpButton:disabled:hover{    
+    border-color: var(--ButtonDisabledColor);
+    color: var(--ButtonDisabledColor);
+}
+
+.buttonContainer {
+    display: block;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.signInAndUpSwitch span {
+    color: var(--TextColor)
+}
+
+.discription-divider{
+    display: block;
+    margin: auto;
+    position: relative;
+    background: var(--description);
+    height: 2px;
+    width: 96%;
+
+}
