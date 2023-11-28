@@ -108,10 +108,10 @@ The backend is implemented in Node.js using the Express framework to create REST
 In the backend, we use the Multer library in Node.js to facilitate file, video, and image uploads. Different Multer instances handle various types of file uploads, such as courseware, videos, and thumbnails. 
 
 ## Sreenshots
-![1](screenshots/student_dashboard.png)
-![2](screenshots/student_dashboard.png)
-![3](screenshots/student_dashboard.png)
-![4](screenshots/student_dashboard.png)
-![5](screenshots/student_dashboard.png)
+![1](Screenshots/Screenshot1.png)
+![2](Screenshots/Screenshot2.png)
+![3](Screenshots/Screenshot3.png)
+![4](Screenshots/Screenshot4.png)
+![5](Screenshots/Screenshot5.png)
 
 
